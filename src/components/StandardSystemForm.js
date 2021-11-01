@@ -25,9 +25,10 @@ function StandardSystemForm({ setBmiAndMessage }) {
             id="weightInPounds"
             name="weightInPounds"
             type="number"
-            value={weightInPounds || ""}
+            value={weightInPounds}
             onChange={(e) => setWeightInPounds(e.target.valueAsNumber)}
-            min="0"
+            min="0.01"
+            step="0.01"
             max="2205" // Nearly 1000 Kg
             required
           />
@@ -43,9 +44,10 @@ function StandardSystemForm({ setBmiAndMessage }) {
             id="heightInFeets"
             name="heightInFeets"
             type="number"
-            value={heightInFeets || ""}
+            value={heightInFeets}
             onChange={(e) => setHeightInFeets(e.target.valueAsNumber)}
-            min="0"
+            min="0.01"
+            step="0.01"
             max="9" // Combined With Inches Field Results In Max 10 Feet
             required
           />
@@ -58,9 +60,10 @@ function StandardSystemForm({ setBmiAndMessage }) {
             id="heightInInches"
             name="heightInInches"
             type="number"
-            value={heightInInches || ""}
+            value={heightInInches}
             onChange={(e) => setHeightInInches(e.target.valueAsNumber)}
             min="0"
+            step="0.01"
             max="12" // Combined With Feet Field Results In Max 10 Feet
             required
           />

@@ -24,9 +24,10 @@ function MetricSystemForm({ setBmiAndMessage }) {
             id="weightInKg"
             name="weightInKg"
             type="number"
-            value={weightInKg || ""}
+            value={weightInKg}
             onChange={(e) => setWeightInKg(e.target.valueAsNumber)}
-            min="0"
+            min="0.01"
+            step="0.01"
             max="1000"
             required
           />
@@ -45,9 +46,10 @@ function MetricSystemForm({ setBmiAndMessage }) {
             id="heightInCentimeters"
             name="heightInCentimeters"
             type="number"
-            value={heightInCentimeters || ""}
+            value={heightInCentimeters}
             onChange={(e) => setHeightInCentimeters(e.target.valueAsNumber)}
-            min="0"
+            min="0.01"
+            step="0.01"
             max="305" // Nearly 10 Feet
             required
           />
